@@ -4,11 +4,15 @@
   yum: name={{item}} state=present
   with_items:
     - tar
+    - bsdtar
     - unzip
+    - p7zip
 
 - name: install tar
   when: ansible_os_family == 'Debian'
   apt: name={{item}} state=present
   with_items:
     - tar
+    - bsdtar
     - unzip
+    - p7zip-full
