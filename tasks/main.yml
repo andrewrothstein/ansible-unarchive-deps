@@ -5,6 +5,8 @@
     - tar
     - bsdtar
     - unzip
+    - gzip
+    - bzip2
 
 - name: RedHat pkgs...
   when: ansible_os_family == 'RedHat'
