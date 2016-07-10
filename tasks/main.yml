@@ -1,5 +1,7 @@
 ---
 - name: install common pkgs...
+  become: yes
+  become_user: root
   package: name={{item}} state=present
   with_items:
     - tar
@@ -8,12 +10,16 @@
     - bzip2
 
 - name: RedHat pkgs...
+  become: yes
+  become_user: root
   when: ansible_os_family == 'RedHat'
   package: name={{item}} state=present
   with_items:
     - p7zip
 
 - name: Debian pkgs...
+  become: yes
+  become_user: root
   when: ansible_os_family == 'Debian'
   package: name={{item}} state=present
   with_items:
