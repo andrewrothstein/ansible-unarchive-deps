@@ -1,4 +1,11 @@
 ---
+- name: resolve platform specific vars
+  include_vars: "{{item}}"
+  with_first_found:
+    - "{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
+    - "{{ansible_distribution}}.yml"
+    - "{{ansible_os_family}}.yml"
+
 - name: install common pkgs...
   become: yes
   become_user: root
@@ -12,15 +19,5 @@
 - name: RedHat pkgs...
   become: yes
   become_user: root
-  when: ansible_os_family == 'RedHat'
+  with_items: '{{unarchive_deps_addl_pkgs}}'
   package: name={{item}} state=present
-  with_items:
-    - p7zip
-
-- name: Debian pkgs...
-  become: yes
-  become_user: root
-  when: ansible_os_family == 'Debian'
-  package: name={{item}} state=present
-  with_items:
-    - p7zip-full
