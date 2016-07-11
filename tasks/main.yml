@@ -1,11 +1,4 @@
 ---
-- name: resolve platform specific vars
-  include_vars: "{{item}}"
-  with_first_found:
-    - "{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
-    - "{{ansible_distribution}}.yml"
-    - "{{ansible_os_family}}.yml"
-
 - name: install common pkgs...
   become: yes
   become_user: root
@@ -16,8 +9,3 @@
     - gzip
     - bzip2
 
-- name: RedHat pkgs...
-  become: yes
-  become_user: root
-  with_items: '{{unarchive_deps_addl_pkgs}}'
-  package: name={{item}} state=present
