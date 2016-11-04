@@ -1,6 +1,6 @@
 ---
 - name: install common pkgs...
-  become: yes
+  become: unarchive_deps_privilege_escalation
   become_user: root
   package: name={{item}} state=present
   with_items:
