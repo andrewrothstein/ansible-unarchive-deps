@@ -1,6 +1,0 @@
----
-unarchive_deps_packages:
-    - tar
-    - unzip
-    - gzip
-    - bzip2
