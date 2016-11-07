@@ -25,5 +25,7 @@ galaxy_info:
     - development
     - packaging
 
-dependencies: []
+dependencies:
+  - role: spk83.bash-profile
+    version: v1.0.0
   
