@@ -1,3 +1,4 @@
 ---
 unarchive_deps_privilege_escalation: False
-unarchive_deps_packages: [] #included as part of OS installation
+unarchive_deps_packages:
+  - gnu-tar
