@@ -1,16 +1,16 @@
-unarchive-deps
+andrewrothstein.unarchive-deps
 ==============
 
-Ansible's unarchive module expects that a bunch of unarchiving tools be present. Over time I've added a few additional unarchiving tools.
+Dependencies for the Ansible unarchive module, et. al.
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - andrewrothstein.unarchive-deps
+```yml
+- hosts: servers
+  roles:
+    - andrewrothstein.unarchive-deps
+```
 
 License
 -------

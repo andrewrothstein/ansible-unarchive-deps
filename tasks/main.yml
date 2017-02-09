@@ -11,5 +11,8 @@
 - name: install common pkgs...
   become: '{{unarchive_deps_privilege_escalation | default(True)}}'
   become_user: root
-  package: name={{item}} state=present
   with_items: "{{unarchive_deps_packages | default(['tar','unzip','gzip','bzip2'])}}"
+  package:
+    name: '{{item}}'
+    state: present
+
