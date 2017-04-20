@@ -13,7 +13,10 @@
 - name: install common pkgs...
   become: '{{unarchive_deps_privilege_escalation | default(True)}}'
   become_user: root
-  with_items: "{{unarchive_deps_packages | default(['tar','unzip','gzip','bzip2','xz'])}}"
+  with_items:
+    - '{{unarchive_deps_all_pkgs}}'
+    - '{{unarchive_deps_tar_pkg|default("tar")}}'
+    - '{{unarchive_deps_xz_pkg|default("xz")}}'
   package:
     name: '{{item}}'
     state: present
