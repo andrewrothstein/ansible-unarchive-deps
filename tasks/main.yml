@@ -20,4 +20,3 @@
   package:
     name: '{{item}}'
     state: present
-
