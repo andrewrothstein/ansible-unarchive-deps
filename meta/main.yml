@@ -16,13 +16,15 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
+    - name: Debian
+      versions:
+        - jessie
     - name: MacOSX
       versions:
         - all
     - name: Alpine
       version:
         - all
-
   galaxy_tags:
     - archive
     - unarchive

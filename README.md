@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-unarchive-deps.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-unarchive-deps)
 andrewrothstein.unarchive-deps
 ==============
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-unarchive-deps.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-unarchive-deps)
 
 Dependencies for the Ansible unarchive module, et. al.
 
