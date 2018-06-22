@@ -24,9 +24,13 @@ test:
               - OS=fedora_23
               - OS=fedora_24
               - OS=fedora_25
+              - OS=fedora_26
+              - OS=fedora_27
               - OS=debian_jessie
+              - OS=debian_stretch
               - OS=ubuntu_trusty
               - OS=ubuntu_xenial
+              - OS=ubuntu_bionic
 
             script:
               - >-
