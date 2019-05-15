@@ -4,6 +4,7 @@
 - alpine_3.6
 - alpine_3.7
 - alpine_3.8
+- alpine_3.9
 - alpine_edge
 - centos_7
 - debian_jessie
@@ -15,6 +16,7 @@
 - fedora_27
 - fedora_28
 - fedora_29
+- fedora_30
 - ubuntu_bionic
 - ubuntu_trusty
 - ubuntu_xenial
