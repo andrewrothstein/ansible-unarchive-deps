@@ -20,3 +20,7 @@
   package:
     name: '{{ item }}'
     state: present
+  register: package_installs
+  until: package_installs is success
+  retries: 10
+  delay: 2
