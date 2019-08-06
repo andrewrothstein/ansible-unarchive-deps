@@ -8,6 +8,7 @@
 - alpine_3.9
 - alpine_edge
 - centos_7
+- debian_buster
 - debian_jessie
 - debian_stretch
 - fedora_23
