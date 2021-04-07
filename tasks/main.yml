@@ -11,8 +11,8 @@
         - '{{ role_path }}/vars'
 
 - name: install unarchive module pkgs...
-  become: '{{ unarchive_deps_privilege_escalation | default(True) }}'
-  become_user: root
+  become: '{{ unarchive_deps_privilege_escalation }}'
+  become_user: '{{ unarchive_deps_privilege_escalation_user }}'
   block:
     - name: install OS packages
       when: ansible_os_family != "Windows"
