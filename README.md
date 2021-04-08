@@ -21,5 +21,5 @@ MIT
 Author Information
 ------------------
 
-Andrew Rothstein <andrew.rothstein@gmail.com>
-Victor Michel <victormichel95@gmail.com>
+* Andrew Rothstein <andrew.rothstein@gmail.com>
+* Victor Michel <victormichel95@gmail.com>
