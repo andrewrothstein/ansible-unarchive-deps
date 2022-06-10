@@ -9,7 +9,12 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-
+        
+- name: update apt cache
+  apt:
+    update_cache: true
+  when: ansible_os_family == 'Debian'
+  
 - name: install unarchive module pkgs...
   become: '{{ unarchive_deps_privilege_escalation }}'
   become_user: '{{ unarchive_deps_privilege_escalation_user }}'
